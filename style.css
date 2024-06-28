@@ -1,0 +1,385 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #111;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  top: -20px;
+  width: 30px;
+  color: #ecc205;
+  animation: animate 5s linear forwards;
+  /* you can set infinite too */
+}
+
+.star::before {
+  content: '\f005';
+  font-family: FontAwesome;
+  text-shadow: 0 0 5px #fff,
+      0 0 20px #fff,
+      0 0 50px #fff;
+}
+
+@keyframes animate {
+
+  0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+  }
+
+  80% {
+      opacity: 1;
+  }
+
+  100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .star {
+      font-size: 8px; 
+  }
+}
+
+h1{
+  text-align: center;
+}
+
+.happy-birthday {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.text {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #002366; /* Changed background color to a light gray */
+}
+
+/* Main container */
+.main {
+  position: relative;
+  background: #002366; /* Changed background color to white */
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  gap: 0 10px;
+}
+/* Box element */
+.box {
+  position: relative;
+  font-size: 1.33em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #222;
+}
+
+.box:nth-child(odd)::before {
+  content: "• Happy Birthday •";
+}
+
+.box:nth-child(even)::before {
+  content: "Keep Smiling";
+  filter: hue-rotate(180deg);
+}
+
+.box.animate {
+  color: rgb(0, 221, 255);
+}
+
+/* Candle count display */
+.candle-count-display {
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  color: #6A4B18;
+  background-color: #F0E4D0;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #553C13;
+}
+
+.candle-count-display span {
+  font-weight: bold;
+  color: #AD030F;
+}
+
+/* Cake element */
+.cake {
+  position: relative;
+  width: 300px; /* Increased width to make the cake more visible */
+  height: 250px; /* Increased height to make the cake more visible */
+  top: 70%;
+  left: 50%;
+  margin-top: -125px; /* Adjusted margin to center the cake */
+  margin-left: -150px; /* Adjusted margin to center the cake */
+}
+
+.plate {
+  width: 320px; /* Increased width to make the plate more visible */
+  height: 190px; /* Increased height to make the plate more visible */
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  box-shadow: 0 2px 0 #b3b3b3, 0 4px 0 #b3b3b3, 0 5px 40px rgba(0, 0, 0, 0.5);
+}
+
+.cake > * {
+  position: absolute;
+}
+
+.layer {
+  position: absolute;
+  display: block;
+  width: 300px; /* Increased width to make the layer more visible */
+  height: 120px; /* Increased height to make the layer more visible */
+  border-radius: 50%;
+  background-color: #553c13;
+  box-shadow: 0 2px 0px #6a4b18, 0 4px 0px #33240b, 0 6px 0px #32230b, 0 8px 0px #31230b, 0 10px 0px #30220b, 0 12px 0px #2f220b, 0 14px 0px #2f210a, 0 16px 0px #2e200a, 0 18px 0px #2d200a, 0 20px 0px #2c1f0a, 0 22px 0px #2b1f0a, 0 24px 0px #2a1e09, 0 26px 0px #2a1d09, 0 28px 0px #291d09, 0 30px 0px #281c09;
+}
+.layer-top {
+  top: 0px;
+}
+
+.layer-middle {
+  top: 33px;
+}
+
+.layer-bottom {
+  top: 66px;
+}
+
+#startAudio {
+  height: 30px;
+  width: 100px;
+  position: absolute;
+  margin: -25px 0 0 -50px; /* Half of the height and half of the width */
+  left: 70%;
+  top: 50%;
+  border-radius: 40px;
+  color: pink;
+}
+
+.icing {
+  top: 2px;
+  left: 5px;
+  background-color: #f0e4d0;
+  width: 290px; /* Increased width to make the icing more visible */
+  height: 110px; /* Increased height
+    height: 110px; /* Increased height to make the icing more visible */
+border-radius: 50%;
+box-shadow: 0 2px 0px #f0e4d0, 0 4px 0px #f0e4d0, 0 6px 0px #f0e4d0, 0 8px 0px #f0e4d0, 0 10px 0px #f0e4d0, 0 12px 0px #f0e4d0, 0 14px 0px #f0e4d0, 0 16px 0px #f0e4d0, 0 18px 0px #f0e4d0, 0 20px 0px #f0e4d0, 0 22px 0px #f0e4d0, 0 24px 0px #f0e4d0, 0 26px 0px #f0e4d0, 0 28px 0px #f0e4d0, 0 30px 0px #f0e4d0;
+}
+
+.candle {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 20px;
+height: 40px;
+background-color: #fff;
+border-radius: 50%;
+box-shadow: 0 2px 0px #fff, 0 4px 0px #fff, 0 6px 0px #fff, 0 8px 0px #fff, 0 10px 0px #fff, 0 12px 0px #fff, 0 14px 0px #fff, 0 16px 0px #fff, 0 18px 0px #fff, 0 20px 0px #fff, 0 22px 0px #fff, 0 24px 0px #fff, 0 26px 0px #fff, 0 28px 0px #fff, 0 30px 0px #fff;
+}
+
+.candle::before {
+content: "";
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 10px;
+height: 20px;
+background-color: #ff69b4;
+border-radius: 50%;
+box-shadow: 0 2px 0px #ff69b4, 0 4px 0px #ff69b4, 0 6px 0px #ff69b4, 0 8px 0px #ff69b4, 0 10px 0px #ff69b4, 0 12px 0px #ff69b4, 0 14px 0px #ff69b4, 0 16px 0px #ff69b4, 0 18px 0px #ff69b4, 0 20px 0px #ff69b4, 0 22px 0px #ff69b4, 0 24px 0px #ff69b4, 0 26px 0px #ff69b4, 0 28px 0px #ff69b4, 0 30px 0px #ff69b4;
+}
+
+.candle::after {
+content: "";
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 5px;
+height: 10px;
+background-color: #ff69b4;
+border-radius: 50%;
+box-shadow: 0 2px 0px #ff69b4, 0 4px 0px #ff69b4, 0 6px 0px #ff69b4, 0 8px 0px #ff69b4, 0 10px 0px #ff69b4, 0 12px 0px #ff69b4, 0 14px 0px #ff69b4, 0 16px 0px #ff69b4, 0 18px 0px #ff69b4, 0 20px 0px #ff69b4, 0 22px 0px #ff69b4, 0 24px 0px
+
+0 24px 0px #ff69b4, 0 26px 0px #ff69b4, 0 28px 0px #ff69b4, 0 30px 0px #ff69b4;
+}
+.flame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 20px;
+  background-color: #ff9900;
+  border-radius: 50%;
+  animation: flame 1s infinite;
+}
+
+@keyframes flame {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+.candle.flame {
+animation: flicker 3s infinite;
+}
+
+@keyframes flicker {
+0% {
+  transform: translate(-50%, -50%) scale(1);
+}
+50% {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+100% {
+  transform: translate(-50%, -50%) scale(1);
+}
+}
+.candle.out .flame {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.candle-count {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 24px;
+font-weight: bold;
+color: #fff;
+text-shadow: 0 2px 0px #fff, 0 4px 0px #fff, 0 6px 0px #fff, 0 8px 0px #fff, 0 10px 0px #fff, 0 12px 0px #fff, 0 14px 0px #fff, 0 16px 0px #fff, 0 18px 0px #fff, 0 20px 0px #fff, 0 22px 0px #fff, 0 24px 0px #fff, 0 26px 0px #fff, 0 28px 0px #fff, 0 30px 0px #fff;
+}
+
+.candle-count::before {
+content: "";
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 20px;
+height: 20px;
+background-color: #fff;
+border-radius: 50%;
+box-shadow: 0 2px 0px #fff, 0 4px 0px #fff, 0 6px 0px #fff, 0 8px 0px #fff, 0 10px 0px #fff, 0 12px 0px #fff, 0 14px 0px #fff, 0 16px 0px #fff, 0 18px 0px #fff, 0 20px 0px #fff, 0 22px 0px #fff, 0 24px 0px #fff, 0 26px 0px #fff, 0 28px 0px #fff, 0 30px 0px #fff;
+}
+
+.candle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 0px #fff, 0 4px 0px #fff, 0 6px 0px #fff, 0 8px 0px #fff, 0 10px 0px #fff, 0 12px 0px #fff, 0 14px 0px #fff, 0 16px 0px #fff, 0 18px 0px #fff, 0 20px 0px #fff, 0 22px 0px #fff, 0 24px 0px #fff, 0 26px 0px #fff, 0 28px 0px #fff, 0 30px 0px #fff;
+}
+
+.candle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 20px;
+  background-color: #ff69b4;
+  border-radius: 50%;
+  box-shadow: 0 2px 0px #ff69b4, 0 4px 0px #ff69b4, 0 6px 0px #ff69b4, 0 8px 0px #ff69b4, 0 10px 0px #ff69b4, 0 12px 0px #ff69b4, 0 14px 0px #ff69b4, 0 16px 0px #ff69b4, 0 18px 0px #ff69b4, 0 20px 0px #ff69b4, 0 22px 0px #ff69b4, 0 24px 0px #ff69b4, 0 26px 0px #ff69b4, 0 28px 0px #ff69b4, 0 30px 0px #ff69b4;
+}
+
+.candle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 10px;
+  background-color: #ff69b4;
+  border-radius: 50%;
+  box-shadow: 0 2px 0px #ff69b4, 0 4px 0px #ff69b4, 0 6px 0px #ff69b4, 0 8px 0px #ff69b4, 0 10px 0px #ff69b4, 0 12px 0px #ff69b4, 0 14px 0px #ff69b4, 0 16px 0px #ff69b4, 0 18px 0px #ff69b4, 0 20px 0px #ff69b4, 0 22px 0px #ff69b4, 0 24px 0px #ff69b4, 0 26px 0px #ff69b4, 0 28px 0px #ff69b4, 0 30px 0px #ff69b4;
+  animation: flicker 3s infinite;
+}
+
+@keyframes flicker {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.candle-count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 2px 0px #fff, 0 4px 0px #fff, 0 6px 0px #fff, 0 8px 0px #fff, 0 10px 0px #fff, 0 12px 0px #fff, 0 14px 0px #fff, 0 16px 0px #fff, 0 18px 0px #fff, 0 20px 0px #fff, 0 22px 0px #fff, 0 24px 0px #fff, 0 26px 0px #fff, 0 28px 0px #fff, 0 30px 0px #fff;
+}
+
+.blow {
+  animation: blow 0.5s forwards;
+}
+
+@keyframes blow {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -20px);
+  }
+}
